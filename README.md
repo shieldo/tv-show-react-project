@@ -13,3 +13,7 @@ To run with a local dev server, use:
 ```sh
 npm run dev
 ```
+
+## Test status
+
+![current project test status](https://github.com/shieldo/tv-show-react-project/actions/workflows/test.yml/badge.svg)
