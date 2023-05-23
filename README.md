@@ -5,3 +5,11 @@ CYF's TV show DOM project implemented using [React](https://react.dev) and [Vite
 The requirements for the original project are here:
 
 https://syllabus.codeyourfuture.io/js-core-3/tv-show-dom-project/getting-started
+
+## Running the app locally
+
+To run with a local dev server, use:
+
+```sh
+npm run dev
+```
