@@ -1,7 +1,8 @@
-import EpisodeList from "./EpisodeList";
+import EpisodeView from "./EpisodeView";
+import { getAllEpisodes } from "./episodes";
 
 function App() {
-  return <EpisodeList />;
+  return <EpisodeView episodes={getAllEpisodes()} />;
 }
 
 export default App;

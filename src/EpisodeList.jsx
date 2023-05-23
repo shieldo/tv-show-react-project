@@ -1,8 +1,6 @@
 import EpisodeCard from "./EpisodeCard";
-import { getAllEpisodes } from "./episodes";
 
-function EpisodeList() {
-  const episodes = getAllEpisodes();
+function EpisodeList({ episodes }) {
   return (
     <div id="episodes">
       {episodes.map((episode) => (

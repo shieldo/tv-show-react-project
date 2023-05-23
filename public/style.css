@@ -4,6 +4,17 @@ body {
   padding: 0;
 }
 
+nav {
+  margin: 20px auto;
+  text-align: center;
+}
+
+nav input {
+  font-size: 2rem;
+  border-color: lightblue;
+  padding: 2px 5px;
+}
+
 div#episodes {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
