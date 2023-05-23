@@ -1,3 +1,32 @@
-#root {
-  color: red;
+body {
+  background-color: antiquewhite;
+  margin: 0;
+  padding: 0;
+}
+
+div#episodes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  grid-gap: 20px;
+  width: 95vw;
+  margin: 20px auto;
+}
+div#episodes article {
+  display: grid;
+  grid-template-rows: max-content auto 2fr;
+  padding: 15px;
+  border: 1px solid lightskyblue;
+  border-radius: 5px;
+  background-color: whitesmoke;
+}
+div#episodes article h2 {
+  font-size: 1.1rem;
+  text-align: center;
+}
+div#episodes article h2 span {
+  display: block;
+}
+div#episodes article img {
+  object-fit: cover;
+  width: 100%;
 }

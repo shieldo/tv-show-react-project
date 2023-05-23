@@ -1,7 +1,7 @@
-import EpisodeCount from "./EpisodeCount";
+import EpisodeList from "./EpisodeList";
 
 function App() {
-  return <EpisodeCount />;
+  return <EpisodeList />;
 }
 
 export default App;
