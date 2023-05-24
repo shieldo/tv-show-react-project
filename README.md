@@ -14,6 +14,14 @@ To run with a local dev server, use:
 npm run dev
 ```
 
+## Running Storybook for the components
+
+There are [Storybook](https://storybook.js.org/) stories for some of the components in the app, which you can see by running:
+
+```sh
+npm run storybook
+```
+
 ## Test status
 
 ![current project test status](https://github.com/shieldo/tv-show-react-project/actions/workflows/test.yml/badge.svg)
