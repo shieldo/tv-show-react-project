@@ -41,3 +41,8 @@ div#episodes article img {
   object-fit: cover;
   width: 100%;
 }
+
+div.episode-selector {
+  margin: 25px auto;
+  text-align: center;
+}

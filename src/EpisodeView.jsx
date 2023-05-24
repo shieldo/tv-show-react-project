@@ -1,5 +1,6 @@
 import { useState } from "react";
 import EpisodeList from "./EpisodeList";
+import EpisodeSelector from "./EpisodeSelector";
 import SearchBar from "./SearchBar";
 
 function EpisodeView({ episodes }) {
@@ -19,6 +20,7 @@ function EpisodeView({ episodes }) {
 
   return (
     <>
+      <EpisodeSelector episodes={episodes} />
       <SearchBar
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}

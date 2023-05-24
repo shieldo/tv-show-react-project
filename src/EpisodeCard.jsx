@@ -1,4 +1,5 @@
 import parse from "html-react-parser";
+import { episodeCode } from "./episodeUtils";
 
 function EpisodeCard({ episode }) {
   const {
@@ -8,7 +9,7 @@ function EpisodeCard({ episode }) {
     url,
   } = episode;
   return (
-    <article>
+    <article id={`episode-${episodeCode(episode)}`}>
       <h2>
         {name} <span>{episodeCode(episode)}</span>
       </h2>
@@ -19,14 +20,6 @@ function EpisodeCard({ episode }) {
       <a href={url}>episode info on TVMaze.com</a>
     </article>
   );
-}
-
-function episodeCode({ season, number }) {
-  return `S${padToTwoDigits(season)}E${padToTwoDigits(number)}`;
-}
-
-function padToTwoDigits(number) {
-  return number.toString().padStart(2, "0");
 }
 
 export default EpisodeCard;
