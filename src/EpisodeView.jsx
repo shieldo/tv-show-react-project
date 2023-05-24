@@ -20,7 +20,7 @@ function EpisodeView({ episodes }) {
 
   return (
     <>
-      <EpisodeSelector episodes={episodes} />
+      <EpisodeSelector episodes={filteredEpisodes} />
       <SearchBar
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
