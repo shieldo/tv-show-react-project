@@ -3,8 +3,6 @@ import parse from "html-react-parser";
 function EpisodeCard({ episode }) {
   const {
     name,
-    season,
-    number,
     image: { medium: image },
     summary,
     url,
@@ -12,7 +10,7 @@ function EpisodeCard({ episode }) {
   return (
     <article>
       <h2>
-        {name} <span>{episodeCode(season, number)}</span>
+        {name} <span>{episodeCode(episode)}</span>
       </h2>
       <div>
         <img src={image} alt={name} />
@@ -23,8 +21,8 @@ function EpisodeCard({ episode }) {
   );
 }
 
-function episodeCode(seasonNumber, episodeNumber) {
-  return `S${padToTwoDigits(seasonNumber)}E${padToTwoDigits(episodeNumber)}`;
+function episodeCode({ season, number }) {
+  return `S${padToTwoDigits(season)}E${padToTwoDigits(number)}`;
 }
 
 function padToTwoDigits(number) {
