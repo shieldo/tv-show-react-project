@@ -1,5 +1,5 @@
 import { beforeAll, describe, expect, it } from "vitest";
-import { container, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import EpisodeCard from "../src/EpisodeCard";
 
 describe("when rendering an episode card with a typical shape", () => {
