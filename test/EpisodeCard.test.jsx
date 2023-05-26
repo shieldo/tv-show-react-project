@@ -1,5 +1,5 @@
 import { beforeAll, describe, expect, it } from "vitest";
-import { render, screen } from "@testing-library/react";
+import { container, render, screen } from "@testing-library/react";
 import EpisodeCard from "../src/EpisodeCard";
 
 describe("when rendering an episode card with a typical shape", () => {
@@ -37,6 +37,16 @@ describe("when rendering an episode card with a typical shape", () => {
     expect(episodeLink.getAttribute("href")).toEqual(
       "http://www.tvmaze.com/episodes/1623968/game-of-thrones-8x06-the-iron-throne"
     );
+  });
+});
+
+describe("when rendering an episode with a summary provided as null", () => {
+  it("has an empty extract element", async () => {
+    const { container } = render(
+      <EpisodeCard episode={{ ...gameOfThronesEpisode(), summary: null }} />
+    );
+    const extract = container.getElementsByClassName("extract")[0];
+    expect(extract.textContent).toEqual("");
   });
 });
 

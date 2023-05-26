@@ -9,7 +9,7 @@ function EpisodeCard({ episode }) {
         {name} <span>{episodeCode(episode)}</span>
       </h2>
       <div>{image && <img src={image.medium} alt={name} />}</div>
-      <div className="extract">{parse(summary)}</div>
+      <div className="extract">{parse(summary || "")}</div>
       <a href={url}>episode info on TVMaze.com</a>
     </article>
   );
