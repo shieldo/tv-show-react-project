@@ -50,6 +50,18 @@ describe("when rendering an episode with a summary provided as null", () => {
   });
 });
 
+describe("when rendering the title of an episode where the name is provided with HTML entities", () => {
+  it("decodes the HTML entity", async () => {
+    const { container } = render(
+      <EpisodeCard
+        episode={{ ...gameOfThronesEpisode(), name: "Peace &amp; Quiet" }}
+      />
+    );
+    const title = container.querySelector("h2");
+    expect(title.textContent).toEqual("Peace & Quiet S08E06");
+  });
+});
+
 function gameOfThronesEpisode() {
   return {
     id: 1623968,

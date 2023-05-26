@@ -3,7 +3,8 @@ import EpisodeView from "./EpisodeView";
 
 function ShowFetcher() {
   const [episodes, setEpisodes] = useState([]);
-  const [currentShowId, setShowId] = useState(107);
+  const gameOfThronesShowId = 82;
+  const [currentShowId, setShowId] = useState(gameOfThronesShowId);
 
   useEffect(() => {
     const fetchShow = async () => {
