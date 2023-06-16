@@ -5,7 +5,7 @@ import EpisodeView from "../src/EpisodeView";
 
 describe("when an episode view is rendered with two Game of Thrones episodes", () => {
   beforeAll(async () => {
-    render(<EpisodeView episodes={gameOfThronesEpisodes()} />);
+    render(<EpisodeView episodes={gameOfThronesEpisodes()} shows={[]} />);
   });
 
   it("renders two episode articles", async () => {

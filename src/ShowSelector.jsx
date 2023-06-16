@@ -1,12 +1,17 @@
-import { getAllShows } from "./shows";
-
-function ShowSelector({ currentShowId, setShowId }) {
-  const shows = getAllShows()
-    .map(({ id, name }) => ({ id, name }))
-    .sort((a, b) => a.name.localeCompare(b.name));
-
+function ShowSelector({ currentShowId, setShowId, shows, unsetShow }) {
   return (
     <div className="show-selector">
+      <p>
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            unsetShow();
+          }}
+        >
+          Return to show list
+        </a>
+      </p>
       <select
         value={currentShowId}
         onChange={(e) => {

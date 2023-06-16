@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import EpisodeView from "./EpisodeView";
 
-function ShowFetcher() {
+function ShowFetcher({ currentShowId, setShowId, ...rest }) {
   const [episodes, setEpisodes] = useState([]);
-  const gameOfThronesShowId = 82;
-  const [currentShowId, setShowId] = useState(gameOfThronesShowId);
 
   useEffect(() => {
     const fetchShow = async () => {
@@ -22,6 +20,7 @@ function ShowFetcher() {
       episodes={episodes}
       currentShowId={currentShowId}
       setShowId={setShowId}
+      {...rest}
     />
   );
 }

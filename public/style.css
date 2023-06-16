@@ -47,3 +47,7 @@ div.show-selector {
   margin: 25px auto;
   text-align: center;
 }
+
+ol#show-list h2 {
+  cursor: pointer;
+}
