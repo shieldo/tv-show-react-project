@@ -48,6 +48,23 @@ div.show-selector {
   text-align: center;
 }
 
+ol#show-list {
+  list-style-type: none;
+}
+
+ol#show-list li {
+  padding: 10px;
+  width: 800px;
+  margin: 0 auto 2em;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
 ol#show-list h2 {
   cursor: pointer;
+}
+
+p#show-filter {
+  text-align: center;
 }

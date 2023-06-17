@@ -12,7 +12,7 @@ function ShowFilter({ setFilter }) {
     };
 
   return (
-    <p>
+    <p id="show-filter">
       Filtering for{" "}
       <input
         type="search"
